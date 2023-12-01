@@ -1,0 +1,45 @@
+<!-- Extends the basic html template -->
+{% extends "dashboard_layout.html" %}
+{% set active_page = "update_contact" %}
+
+<!-- Updates the <head> of the webpage -->
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/general_updateContactDetails.css') }}"/>
+	<title>Update Contact Details</title>
+{% endblock %}
+
+<!-- Content Header -->
+{% block contentHeader %}
+	<b><i class="fa fa-edit fa-fw"></i>Update Particulars</b>
+{% endblock %}
+
+<!-- Main Content of the Page -->
+{% block contentBody %}
+	{% if data %}
+	<form action='/update_contact' method='POST'>
+		<!-- First Name -->
+		<label>First Name :</label>
+		<input type="text" placeholder="{{ data[2] }}" disabled><br/>
+
+		<!-- Middle Name -->
+		<label>Middle Name :</label>
+		<input type="text" placeholder="{{ data[3] }}" disabled><br/>
+
+		<!-- Last Name -->
+		<label>Last Name :</label>
+		<input type="text" placeholder="{{ data[4] }}" disabled><br/>
+
+		<!-- NRIC -->
+		<label>NRIC :</label>
+		<input type="text" placeholder="{{ data[0] }}" disabled><br/>
+
+		<!-- Contact Number -->
+		<label>Contact Number :</label>
+		<input name="mobile" type="number" id="current_contact" value="{{ data[5] }}"><br/>
+		<br/><br/>
+		
+		<!-- Submit Button -->
+		<input type="submit" value="Update"><br/><br/>
+	</form>
+	{% endif %}
+{% endblock %}

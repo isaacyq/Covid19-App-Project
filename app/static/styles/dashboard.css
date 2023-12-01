@@ -1,0 +1,40 @@
+@font-face { 
+	font-family: Nunito; 
+	src: url('nunito/Nunito-Regular.ttf'); 
+} 
+
+/* Change default font to Nunito-Regular */
+html,body,h1,h2,h3,h4,h5,input,div,table,tr,td,th,select {
+	font-family: "Nunito", sans-serif;
+}
+
+/* top right log out button */
+.w3-right {
+    background-color: black; /* black */
+    border: none;
+    cursor: pointer;
+}
+
+a:link {
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hover{
+	opacity: 0.8;
+	transition: 0.5s;
+}
+
+.hover:hover{
+	border-radius: 10px;
+	box-shadow: 5px 10px 15px rgba(0,0,0,0.5);
+	opacity: 1;
+
+	transform: translateY(-10px);
+}

@@ -1,0 +1,21 @@
+.w3-margin-bottom {
+	width: 400px;
+	clear: both;
+}
+
+.w3-margin-bottom input {
+	width: 100%;
+	clear: both;
+}
+
+
+/* Hides the step in input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
